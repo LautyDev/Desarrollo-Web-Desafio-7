@@ -1,0 +1,75 @@
+@import './_colors.scss';
+
+.contact {
+    min-height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    .formContact {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            height: 2.5rem;
+            padding: 1rem;
+            outline: none;
+            margin-bottom: 1rem;
+            border-radius: 50px;
+            border-color: $black1;
+        }
+
+        textarea {
+            padding: 1rem;
+            resize: none;
+            margin-bottom: 1rem;
+            border-radius: 25px;
+            border-color: $black1;
+        }
+
+        .buttonsContact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+
+            button {
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                text-transform: uppercase;
+                cursor: pointer;
+                background-color: $black1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        .formContact {
+            .buttonsContact {
+                button {
+                   transition: all 550ms ease-in; 
+                }
+            }
+        }
+        
+    }
+
+    .contact {
+        .formContact {
+            .buttonsContact {
+                button:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        
+    }
+}

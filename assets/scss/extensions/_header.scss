@@ -1,0 +1,108 @@
+@import './_colors.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+
+    .logo {
+        height: 3rem;
+        width: 3rem; 
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .burgerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2rem;
+        background-color: white;
+        border: none;
+        color: grey;
+        box-shadow: 0 0 5px $black1;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: box-shadow 0.5s ease-in;
+    }
+
+    .burguerMenu:hover {
+        box-shadow: 0 0 10px $black1;
+    }
+
+    input#menu {
+        display: none;
+    }
+
+    input#menu:checked ~ nav {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background-color: white;
+
+        .closeMenu {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.5rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            li {
+                text-transform: uppercase;
+                font-weight: 600;
+                border-radius: 5px;
+                padding: 0.5rem;
+            }
+
+            li:hover {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    header {
+        .burgerMenu {
+            display: none;
+        }
+
+        nav {
+            display: initial;
+            position: initial;
+
+            ul {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .closeMenu {
+                display: none;
+            }
+        }
+    }
+}

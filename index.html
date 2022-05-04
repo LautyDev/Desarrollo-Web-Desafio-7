@@ -1,0 +1,89 @@
+<!-- 
+    Vea este desafío en mi página web
+    https://challengeseven.lauty.dev
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Página de helados para el desafío 7 de desarrollo web de CoderHouse">
+    <meta name="keywords" content="helados, sass, coderhouse, desarrollo web, ice cream, web development">
+
+    <meta name="theme-color" content="#5e5e5e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://challengeseven.lauty.dev">
+    <meta property="og:site_name" content="LautyDev Website">
+    <meta property="og:title" content="CoderHouse - Desarrollo web - Desafío 7">
+    <meta property="og:description" content="Página de helados para el desafío 7 de desarrollo web de CoderHouse">
+    <meta property="og:image" content="https://challengeseven.lauty.dev/assets/img/favicon.ico">
+
+    <title>Helados SASS II</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./assets/img/favicon.ico" alt="Logo" class="logo"></a>
+        <label for="menu" class="burgerMenu">
+            <i class='bx bx-menu'></i>
+          </label>
+          <input type="checkbox" id="menu">
+        <nav>
+            <label for="menu" class="closeMenu">
+                <i class='bx bx-x'></i>
+              </label>
+            <ul>
+                <li><a href="#history">Historia</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- HeroImage -->
+        
+        <section class="heroImage">
+            <h1>Helados</h1>
+        </section>
+
+        <!-- Historia -->
+
+        <section class="history" id="history">
+            <div class="imgHistory">
+                <img src="./assets/img/history.jpg" alt="History">
+            </div>
+            <article class="dataHistory">
+                <h2>Historia</h2>
+                <p>El origen de los helados es muy antiguo. Algunos sostienen que los antiguos romanos son los inventores del "sorbete", para lo cual utilizaban nieve, frutas y miel. Cuentan que el emperador Nerón hacia traer nieve de los Alpes para que le preparasen esta bebida helada.</p>
+                <p>Otros, en cambio, señalan que los chinos, muchos siglos antes de Jesucristo, ya mezclaban la nieve de las montañas con miel y frutas. En la corte de Alejandro Magno, se enterraban en la nieve ánforas conteniendo frutas mezcladas con miel para conservarlas mejor y se servían heladas.</p>
+                <p>En el año 1660, el italiano Procopio inventó una máquina que homogeneizaba las frutas, el azúcar y el hielo, con lo que se obtenía una verdadera crema helada, similar a la que hoy conocemos. Procopio, abrió en París el "Café Procope", donde además de café se servían helados y así se popularizó. Durante muchos años los heladeros italianos guardaron celosamente el secreto de preparación de los helados, aunque como vendedores ambulantes lo difundieron por toda Europa. Para el siglo XVIII, las recetas de helados empezaron a incluirse en los libros de cocina.</p>
+            </article>
+        </section>
+
+        <!-- Contacto -->
+
+        <section class="contact" id="contact">
+            <form action="https://formspree.io/f/xqknlznp" method="post" class="formContact">
+                <h2>Contacto</h2>
+                <input type="text" name="Nombre" placeholder="Nombre*" required>
+                <input type="text" name="Apellido" placeholder="Apellido*" required>
+                <input type="email" name="Correo" placeholder="Correo*" required>
+                <input type="tel" name="Teléfono" placeholder="Teléfono*" required>
+                <textarea name="Mensaje" placeholder="Mensaje" cols="30" rows="10"></textarea>
+                <div class="buttonsContact">
+                    <button type="submit" class="submit">Enviar</button>
+                    <button type="reset" class="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Ir arriba -->
+        <div class="up" id="up"><i class="bx bx-up-arrow-alt"></i></div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
